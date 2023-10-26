@@ -8,7 +8,7 @@ private:
 public:
 	MyQueue(int capacity) {
 		this->capacity = capacity;
-		this->array = new T[capacity];
+		array = new T[capacity];
 	}
 
 	template <typename T>

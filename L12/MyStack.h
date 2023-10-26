@@ -6,6 +6,11 @@ private:
 	int capacity = 0;
 	int sizeStack = 0;
 public:
+	MyStack(int capacity) {
+		this->capacity = capacity;
+		array = new T[capacity];
+	}
+
 	template <typename T>
 	MyStack(MyStack<T>& st) {
 		this->capacity = capacity;
