@@ -51,7 +51,7 @@ public:
 
 	void pushFront(T value) {
 		if (sizeDequeue < capacity) {
-			for (int i = sizeDequeue + 1; i > 0; i--) {
+			for (int i = sizeDequeue; i > 0; i--) {
 				array[i] = array[i - 1];
 			}
 			array[0] = value;
@@ -70,9 +70,9 @@ public:
 	}
 
 	T popFront() {
-		if (sizeDequeue < capacity) {
+		if (sizeDequeue > 0) {
 			T el = array[0];
-			for (int i = 0; i < sizeDequeue; i--) {
+			for (int i = 0; i < sizeDequeue; i++) {
 				array[i] = array[i + 1];
 			}
 			sizeDequeue--;

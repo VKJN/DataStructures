@@ -2,7 +2,7 @@
 #include "MyStack.h"
 #include "MyQueue.h"
 #include "MyDequeue.h"
-#define test 1
+#define test 3
 using namespace std;
 
 template <typename T>
@@ -41,7 +41,16 @@ int main()
 	cout << queue.Back() << endl << queue.Front() << endl;
 
 #elif test == 3
+	MyDequeue<int> dequeue(6);
 
+	dequeue.pushBack(2);
+	dequeue.pushBack(5);
+	dequeue.pushBack(8);
+	dequeue.pushBack(9);
+	dequeue.pushBack(12);
 
+	cout << dequeue.Back() << endl << dequeue.Front() << "\n\n";
+	dequeue.pushFront(0);
+	cout << dequeue.Back() << endl << dequeue.Front() << endl;
 #endif 
 }
